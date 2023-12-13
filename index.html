@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+		/>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"
+		></script>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<header id="header-element">
+				<svg
+					id="react-img"
+					width="100%"
+					height="100%"
+					viewBox="-10.5 -9.45 21 18.9"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="mt-4 mb-3 text-link dark:text-link-dark w-24 lg:w-28 self-center text-sm me-0 flex origin-center transition-all ease-in-out"
+				>
+					<circle cx="0" cy="0" r="2" fill="currentColor"></circle>
+					<g stroke="currentColor" stroke-width="1" fill="none">
+						<ellipse rx="10" ry="4.5"></ellipse>
+						<ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+						<ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
+					</g>
+				</svg>
+				<div id="page-name">React.js Quick Documention</div>
+			</header>
+
+			<ul id="list-and-items">
+				<li>
+					<a href="#What_is_JSX_?" class="nav-link">What is JSX ?</a>
+				</li>
+				<li>
+					<a href="#History_Of_React" class="nav-link">History Of React</a>
+				</li>
+				<li>
+					<a href="#Need_Of_State" class="nav-link">Need of State</a>
+				</li>
+				<li>
+					<a href="#Props_And_its_Methods" class="nav-link">Props And its Methods</a>
+				</li>
+				<li>
+					<a href="#Hooks" class="nav-link">Hooks</a>
+				</li>
+				
+			</ul>
+		</nav>
+		<div>
+			<main id="main-doc">
+				<section class="main-section" id="What_is_JSX_?">
+					<header>What is JSX ?</header>
+					<article>
+						JSX, or JavaScript XML, is a syntax extension for JavaScript
+						that is commonly used with React, a popular JavaScript library
+						for building user interfaces. JSX allows developers to write
+						HTML-like code within JavaScript, providing a more concise and
+						expressive way to define the structure of UI components. It
+						essentially enables the embedding of XML/HTML-like code directly
+						into JavaScript, blending the power of JavaScript with the
+						simplicity and readability of HTML. In JSX, you can write tags
+						and elements similar to HTML, but instead of creating a separate
+						template language, JSX allows you to write these structures
+						directly in your JavaScript code. For example, instead of
+						creating DOM elements using `document.createElement`, you can
+						use JSX to define elements more intuitively:
+
+						<code> const element = &lt;h1&gt;Hello, JSX!&lt;/h1&gt;; </code>
+
+						This JSX code gets transpiled to regular JavaScript by tools
+						like Babel before being executed in the browser. The above JSX
+						code would be transformed into something like:
+
+						<code>
+							const element = React.createElement('h1', null, 'Hello,
+							JSX!');
+						</code>
+
+						This transformation allows developers to seamlessly integrate UI
+						components into their JavaScript code, making the code more
+						readable and maintainable. JSX not only simplifies the creation
+						of UI elements but also facilitates the use of JavaScript
+						expressions and logic within the markup, enabling dynamic and
+						data-driven user interfaces in a more concise and declarative
+						manner.
+
+						<p>Here's how JSX is used in React</p>
+						<ul>
+							<li>
+								<h4>Component Creation</h4>
+								<article>
+									JSX (JavaScript XML) is a syntax extension for
+									JavaScript that allows developers to write HTML-like
+									code in their JavaScript files. JSX is commonly used
+									with React, a popular JavaScript library for building
+									user interfaces. JSX provides a more concise and
+									readable way to define the structure of React
+									components. Here's how JSX is used in React: Component
+									Creation: In React, you create components to represent
+									different parts of your user interface. These
+									components can be written using JSX. A basic React
+									component might look like this:
+									<code>
+										<pre>
+import React from 'react';
+  const MyComponent = () => {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Hello, JSX in React!&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  };
+  export default MyComponent;</pre
+										>
+									</code>
+
+									In this example, the MyComponent function returns JSX
+									that represents the structure of the component. The
+									HTML-like syntax within the return statement is JSX.
+								</article>
+							</li>
+						</ul>
+					</article>
+					<p></p>
+				</section>
+				<section class="main-section" id="History_Of_React">
+					<header>History Of React</header>
+					<article>
+						React, a JavaScript library for building user interfaces, was
+						developed by Facebook and first released to the public in May
+						2013. React was created to address the challenges of building
+						large-scale and dynamic user interfaces, particularly for
+						single-page applications where the user experience required
+						frequent updates without reloading the entire page.
+
+						<p>Here's a brief history of React:</p>
+						<ol>
+							<li>
+								<h5>Early Development (2011-2013)</h5>
+								<p>
+									React was initially developed by Jordan Walke, a
+									software engineer at Facebook. It was first used
+									internally on Facebook's newsfeed in 2011. The library
+									was later open-sourced at JSConf US in May 2013, making
+									it available to the broader development community.
+								</p>
+							</li>
+
+							<li>
+								<h5>React's Key Concepts</h5>
+								<p>
+									React introduced several key concepts that set it apart
+									from other JavaScript frameworks of its time. Notably,
+									the Virtual DOM, which allowed React to efficiently
+									update the user interface by only rendering the
+									components that changed.
+								</p>
+							</li>
+
+							<li>
+								<h5>Component-Based Architecture</h5>
+								<p>
+									React popularized the concept of building user
+									interfaces using a component-based architecture.
+									Components are reusable and encapsulated units of UI,
+									which makes it easier to manage and maintain large
+									codebases.
+								</p>
+							</li>
+
+							<li>
+								<h5>React Native (2015)</h5>
+								<p>
+									React Native, an extension of React, was introduced in
+									2015. It allows developers to build native mobile
+									applications using React and JavaScript. This was a
+									significant move towards enabling cross-platform
+									development with a single codebase.
+								</p>
+							</li>
+
+							<li>
+								<h5>Growing Ecosystem and Community</h5>
+								<p>
+									React quickly gained popularity due to its simplicity,
+									performance, and the component-based approach. A
+									vibrant ecosystem of libraries and tools emerged around
+									React, further solidifying its position in the
+									front-end development landscape.
+								</p>
+							</li>
+
+							<li>
+								<h5>Introduction of JSX</h5>
+								<p>
+									React introduced JSX (JavaScript XML), a syntax
+									extension that allows mixing HTML-like code with
+									JavaScript. JSX made it easier to write and understand
+									React components.
+								</p>
+							</li>
+
+							<li>
+								<h5>React Fiber (2017)</h5>
+								<p>
+									React Fiber was a major internal reimplementation of
+									the React core algorithm. It aimed to improve the
+									performance and make React more adaptable to concurrent
+									rendering. Although it didn't bring many user-facing
+									changes, it laid the foundation for future performance
+									improvements.
+								</p>
+							</li>
+
+							<li>
+								<h5>Hooks (2018)</h5>
+								<p>
+									React introduced Hooks in React 16.8, allowing
+									developers to use state and other React features in
+									functional components, rather than being limited to
+									class components. This simplified component logic and
+									made it easier to reuse code.
+								</p>
+							</li>
+
+							<li>
+								<h5>React Today</h5>
+								<p>
+									React continues to evolve with regular updates and
+									improvements. The React team, along with the community,
+									actively contributes to its development, addressing
+									performance concerns, introducing new features, and
+									maintaining backward compatibility.
+								</p>
+								<p>
+									React has become a fundamental tool for front-end
+									developers, widely adopted by companies and individuals
+									for building modern, responsive, and dynamic user
+									interfaces. Its success can be attributed to its
+									simplicity, flexibility, and the h5 community that has
+									formed around it.
+								</p>
+							</li>
+						</ol>
+					</article>
+				</section>
+				<section class="main-section" id="Need_Of_State">
+					<header>Need Of State</header>
+					<article>
+						<p>
+							In React, "state" represents the dynamic aspects of a
+							component, encapsulating information that may change over
+							time. It is essentially a JavaScript object that holds the
+							current condition or data of a component. State is declared
+							using the useState hook in functional components or, in the
+							case of class components, within the this.state object.
+							However, the introduction of hooks has made functional
+							components the preferred choice for many developers due to
+							their conciseness.
+						</p>
+						<p>
+							State should be treated as immutable in React, and
+							modifications are typically performed using the setState
+							function, which ensures proper rendering and component
+							lifecycle management. This concept of immutability is crucial
+							for maintaining predictable and efficient updates to the user
+							interface. The local scope of state is limited to the
+							component that declares it, promoting modular and
+							maintainable code by preventing unintended interactions with
+							the state of other components.
+						</p>
+
+						<h3>Needs of State</h3>
+						<ol>
+							<li>
+								<h5>Dynamic UIs:</h5>
+								<p>
+									React applications often require dynamic user
+									interfaces that change based on user interactions,
+									input, or external data. State allows components to
+									manage and respond to these changes.
+								</p>
+							</li>
+
+							<li>
+								<h5>User Input Handling:</h5>
+								<p>
+									State is crucial for handling user input. It allows
+									components to capture and store user input, update the
+									state, and trigger re-rendering to reflect the updated
+									state on the UI.
+								</p>
+							</li>
+
+							<li>
+								<h5>Component Lifecycle:</h5>
+								<p>
+									State is closely tied to the component lifecycle. When
+									state changes, React re-renders the component to
+									reflect the updated state. This ensures that the UI is
+									always in sync with the underlying data.
+								</p>
+							</li>
+
+							<li>
+								<h5>Asynchronous Data Fetching:</h5>
+								<p>
+									When dealing with asynchronous operations, such as
+									fetching data from an API, state is used to store and
+									manage the data as it becomes available. This allows
+									the component to re-render with the fetched data.
+								</p>
+							</li>
+
+							<li>
+								<h5>Conditional Rendering:</h5>
+								<p>
+									State enables conditional rendering of components or
+									elements based on certain conditions. Components can
+									render different content depending on the values stored
+									in their state.
+								</p>
+							</li>
+
+							<li>
+								<h5>Forms and Controlled Components:</h5>
+								<p>
+									State is commonly used in forms to manage the
+									controlled components. A controlled component is a form
+									element whose value is controlled by React state. State
+									helps in capturing, validating, and updating form
+									input.
+								</p>
+							</li>
+
+							<li>
+								<h5>Local Component Logic:</h5>
+								<p>
+									State is used to store and manage local logic within a
+									component. For example, toggling between different
+									views, tracking the visibility of a modal, or managing
+									the progress of a multi-step process.
+								</p>
+							</li>
+						</ol>
+
+						<h3>Example</h3>
+						<code>
+							<pre>
+    import React, { useState } from 'react';
+    function Counter() {
+    // State declaration using the useState hook
+    const [count, setCount] = useState(0);
+    return(
+    &lt;div&gt;
+      &lt;p>Count: {count}&lt;/p&gt;
+      &lt;button onClick={() => setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+    &lt;/div&gt;
+      );
+    }</pre
+							>
+						</code>
+					</article>
+				</section>
+				<section class="main-section" id="Props_And_its_Methods">
+					<header>Props And its Methods</header>
+					<article>
+						<h3>What is Props?</h3>
+						<p>
+							In React, "props" is a shorthand term for "properties." It is
+							a mechanism for passing data from a parent component to a
+							child component. Props enable the flow of information in a
+							unidirectional manner within the component tree. They allow
+							components to receive and use data provided by their parent
+							components.
+						</p>
+						<h4>Role Of Props</h4>
+						<ul>
+							<li>
+								<b>Data passing : </b>
+								Props are primarily used for passing data from a parent
+								component to a child component during the component's
+								creation and rendering.
+							</li>
+							<li>
+								<b>Immutable :</b>
+								Props are immutable, meaning they cannot be modified by
+								the receiving component. They serve as a means of
+								communication but do not allow the child component to
+								change the original data.
+							</li>
+							<li>
+								<b>Customisation : </b>
+								Props enable the customization of child components based
+								on dynamic values from the parent, making components more
+								versatile and reusable.
+							</li>
+						</ul>
+						<h3>What is its Methods?</h3>
+						<p>
+							In React, props are used to pass data from a parent component
+							to a child component. While props themselves are not directly
+							used for accessing methods in a child component, methods can
+							be passed as props, allowing the child component to invoke
+							those methods provided by the parent.
+						</p>
+						<h3>Passing Methods as Props</h3>
+						<ol>
+							<li>
+								<h4>Define a Method in the Parent:</h4>
+								In the parent component, you define a method that you want
+								to pass down to the child component. This method could be
+								responsible for handling certain logic, updating the
+								state, or performing any other actions.
+								<code>
+									<pre>
+  class ParentComponent extends React.Component {
+    handleClick = () => {
+      console.log("Button clicked in the parent!");
+    };
+  
+    render() {
+      // Passing the method as a prop
+      return &lt;ChildComponent handleClick={this.handleClick} /&gt;;
+    }
+  }
+</pre
+									>
+								</code>
+							</li>
+
+							<li>
+								<h4>Receive Method as a Prop in the Child:</h4>
+								In the child component, you define a prop with a name
+								(e.g., handleClick) to receive the method from the parent.
+								The child component can then invoke this method when
+								needed.
+								<code>
+									<pre>
+  function ChildComponent(props) {
+    return (
+      &lt;div&gt;
+        &lt;button onClick={props.handleClick}&gt;Click me&lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+</pre
+									>
+								</code>
+							</li>
+
+							<li>
+								<h4>Invoke the Method in the Child:</h4>
+								In the child component, you use the received method as a
+								callback, typically in response to some user interaction,
+								like a button click.
+								<code>
+									<pre>
+ // Parent Component
+class ParentComponent extends React.Component {
+  // Method to be passed as a prop
+  handleClick = () => {
+    console.log("Button clicked in the parent!");
+  };
+
+  render() {
+    // Passing the method as a prop
+    return &lt;ChildComponent handleClick={this.handleClick} /&gt;;
+  }
+}
+
+// Child Component
+function ChildComponent(props) {
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Child Component&lt;/p&gt;
+      &lt;button onClick={props.handleClick}&gt;Click me in the child&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</pre
+									>
+								</code>
+							</li>
+						</ol>
+					</article>
+				</section>
+				<section class="main-section" id="Hooks">
+					<header>Hooks</header>
+					<article>
+						<h3>What is Hooks?</h3>
+						<p>
+							Hooks are a feature introduced in React 16.8 that allow
+							functional components to have state and lifecycle features,
+							which were previously exclusive to class components. They
+							provide a more direct way to interact with the React features
+							without using class syntax. The most commonly used hooks
+							include useState, useEffect, useContext, and more.
+						</p>
+
+						<h3>History Of Hooks</h3>
+						
+						<p>
+							Before the introduction of hooks, state and lifecycle methods
+							were primarily associated with class components. While
+							functional components were more concise and easier to reason
+							about, they lacked state and lifecycle management. The need
+							for more reusable logic and state in functional components
+							led to the development of hooks.</p>
+						<p>
+							Hooks were proposed by Dan Abramov and Sophie Alpert, and
+							they were officially released in React 16.8 in February 2019.
+							The introduction of hooks marked a significant shift in React
+							development by providing a more
+						</p>
+						<h3> Why We need it? </h3>
+						<ol>
+							<li>
+								<strong>Functional Components with State:</strong>
+								<p
+									>Hooks allow functional components to have local state,
+									reducing the need for class components.</p
+								>
+							</li>
+
+							<li>
+								<strong>Code Reusability:</strong>
+								<p
+									>Hooks promote code reuse by enabling the extraction of
+									stateful logic into custom hooks that can be shared
+									across components.</p
+								>
+							</li>
+
+							<li>
+								<strong>Simplified Lifecycle Management:</strong>
+								<p
+									>Hooks, especially useEffect, simplify side effect and
+									lifecycle management in functional components, making
+									them more predictable and readable.</p
+								>
+							</li>
+
+							<li>
+								<strong>Improved Component Logic:</strong>
+								<p
+									>Hooks provide a cleaner way to manage component logic,
+									reducing the need for higher-order components or render
+									props.</p
+								>
+							</li>
+
+							<li>
+								<strong>Easier Testing:</strong>
+								<p
+									>Functional components with hooks are often easier to
+									test due to their increased modularity and the ability
+									to isolate logic.</p
+								>
+							</li>
+
+							<li>
+								<strong>Consistent State Handling:</strong>
+								<p
+									>Hooks provide a consistent way to handle state across
+									components, leading to more maintainable and
+									understandable codebases.</p>
+							</li>
+						</ol>
+            <h4 id="referalLink">Refer to <a href="https://react.dev/">React.dev</a> For more information about React</h4>
+					</article>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>

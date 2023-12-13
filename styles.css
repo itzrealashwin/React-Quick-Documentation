@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Tomorrow', sans-serif; */
+  background-color: rgba(35, 39, 47);
+  color: white;
+}
+#react-img {
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  color-scheme: dark;
+  font-family: Optimistic Text, -apple-system, ui-sans-serif, system-ui,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
+  line-height: 30px;
+  overflow-wrap: break-word;
+  font-weight: 400;
+  height: 100%;
+  fill: none;
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+  color: rgb(20 158 202);
+  vertical-align: middle;
+  margin-bottom: 0.75rem;
+  margin-inline-end: 0;
+  margin-top: 1rem;
+  display: flex;
+  transform-origin: center;
+  align-self: center;
+  font-size: 13px;
+  width: 3rem;
+}
+
+#navbar {
+  max-width: 200px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-right: 5px solid black;
+  position: fixed;
+}
+#page-name {
+  width: 125px;
+  word-wrap: normal;
+  color: white;
+  font-weight: bolder;
+}
+
+#header-element {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#history_of_react ol {
+  list-style: lower-roman !important;
+  margin-left: 20px;
+}
+#need_of_state ol {
+  list-style: lower-roman !important;
+  margin-left: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#list-and-items {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 210px;
+}
+#main-doc header {
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+code {
+  display: block;
+  text-align: left;
+  /* white-space: pre-line; */
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #2b2a2a;
+  padding: 15px;
+  margin: 20px;
+  border: rgb(52 58 70) solid 3px;
+  border-radius: 10px;
+  font-size: larger;
+  width: 100%;
+  max-width: 700px;
+  background-color: #16181d;
+}
+
+article {
+  margin: 20px 0;
+}
+
+plaintext {
+  white-space: pre-wrap;
+  margin: 1em 0;
+  display: block;
+}
+
+section {
+  margin-right: 5px;
+}
+
+#hooks a {
+  color: rgb(20 158 202);
+  text-decoration: underline;
+}
+
+#referalLink {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  
+  #navbar {
+    position: relative;
+    display: inline;
+    border:none;
+    width: 90% !important;
+  }
+  #navbar #list-and-items{
+    flex-direction: row;
+    width: 90%;
+  }
+ 
+
+  #main-doc {
+    margin: 0 auto;
+    margin-left: 10px;
+    position: absolute;
+  }
+}
